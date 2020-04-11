@@ -141,7 +141,7 @@ const CllctvImage = () => {
 }
 
 const IndexPage = () => {
-  const url = "https://internalmeeting.com/compi"
+  const url = "https://internalmeeting.com/compi/"
   const imageUrl = `https://i.gyazo.com/13c5e6224440597717815d35110799ff.png`
   const ogDescription = `cllctv. が「Internal Meeting Compilation」として鶴舞DAYTRIPとK.Dハポンの支援を目的としたコンピレーションアルバムのリリースを企画いたしました。`
 
