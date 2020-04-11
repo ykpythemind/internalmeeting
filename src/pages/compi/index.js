@@ -133,7 +133,7 @@ const IndexPage = () => (
 
       <Center message={conceptMessage}></Center>
 
-      <CenterP>
+      <CenterP style={{ marginTop: 30 }}>
         発起人
         <br />
         トモヒロツジ / <a href="http://cllctv-jp.com">cllctv.</a>
