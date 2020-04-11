@@ -302,7 +302,7 @@ const IndexPage = () => {
           </a>
         </footer>
 
-        <div style={{ marginTop: 30, marginBottom: 30 }}>
+        <div style={{ marginTop: 80, marginBottom: 30 }}>
           <AAAImage />
         </div>
       </Container>
