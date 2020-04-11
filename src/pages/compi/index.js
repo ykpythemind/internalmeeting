@@ -19,6 +19,16 @@ const Global = createGlobalStyle`
     color: #222;
     background-color: #fff;
   }
+
+  a:link {
+    color: #1a0dab;
+  }
+  a:hover {
+    color: #1a0dab;
+  }
+  a:visited {
+    color: #1a0dab;
+  }
 `
 
 /*  // :root {
