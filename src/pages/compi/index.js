@@ -114,181 +114,200 @@ const Message = styled.div`
   margin-bottom: 20px;
 `
 
-const CllctvImage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "cllctv.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
+const query = graphql`
+  query {
+    placeholderImage: file(relativePath: { eq: "cllctv.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
-  `)
+    ogpImage: file(relativePath: { eq: "imc_ogp.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
+const CllctvImage = () => {
+  const data = useStaticQuery(query)
   return (
     <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="cllctv" />
   )
 }
 
-const IndexPage = () => (
-  <Layout>
-    <Global />
-    <Container>
-      <SEO title="Internal Meeting Compilation" />
-      <CompiLogoOuter>
-        <CompiLogoImage />
-      </CompiLogoOuter>
+const IndexPage = () => {
+  const url = "https://internalmeeting.com/compi"
+  const imageUrl = `https://i.gyazo.com/13c5e6224440597717815d35110799ff.png`
+  const ogDescription = `cllctv. が「Internal Meeting Compilation」として鶴舞DAYTRIPとK.Dハポンの支援を目的としたコンピレーションアルバムのリリースを企画いたしました。`
 
-      <SectionTitle>CONCEPT</SectionTitle>
+  return (
+    <Layout>
+      <Global />
+      <Container>
+        <SEO
+          title="Internal Meeting Compilation"
+          url={url}
+          imageUrl={imageUrl}
+          description={ogDescription}
+        />
+        <CompiLogoOuter>
+          <CompiLogoImage />
+        </CompiLogoOuter>
 
-      <CenterP>
-        {`昨今の新型コロナウイルスの蔓延により、音楽業界は大きな危機を迎えています。当たり前だった日々はあまりに突然に終わりを告げ、どうすれば生き残れるか、それを真剣に考えねばならないほど、事態は深刻なものです。`}
-        <br />
-        {`そんな中で、自分たちがお世話になった居場所だけでも自分たちの手でサポートしたい。そんな意思を持って今回、二つのライブハウス、鶴舞DAYTRIPとK.Dハポンの支援を目的とした、コンピレーションアルバムのリリースを企画いたしました。`}
-      </CenterP>
+        <SectionTitle>CONCEPT</SectionTitle>
 
-      <CenterP style={{ marginTop: 30 }}>
-        発起人
-        <br />
-        トモヒロツジ /{" "}
-        <a href="http://cllctv-jp.com" target="_blank">
-          cllctv.
-        </a>
-        <br />
-        ykpythemind（伊藤薫人）/{" "}
-        <a href="https://nkwors.com" target="_blank">
-          猫を堕ろす
-        </a>
-      </CenterP>
+        <CenterP>
+          {`昨今の新型コロナウイルスの蔓延により、音楽業界は大きな危機を迎えています。当たり前だった日々はあまりに突然に終わりを告げ、どうすれば生き残れるか、それを真剣に考えねばならないほど、事態は深刻なものです。`}
+          <br />
+          {`そんな中で、自分たちがお世話になった居場所だけでも自分たちの手でサポートしたい。そんな意思を持って今回、二つのライブハウス、鶴舞DAYTRIPとK.Dハポンの支援を目的とした、コンピレーションアルバムのリリースを企画いたしました。`}
+        </CenterP>
 
-      <SectionTitle>PURPOSE</SectionTitle>
+        <CenterP style={{ marginTop: 30 }}>
+          発起人
+          <br />
+          トモヒロツジ /{" "}
+          <a href="http://cllctv-jp.com" target="_blank">
+            cllctv.
+          </a>
+          <br />
+          ykpythemind（伊藤薫人）/{" "}
+          <a href="https://nkwors.com" target="_blank">
+            猫を堕ろす
+          </a>
+        </CenterP>
 
-      <center style={{ marginBottom: 26 }}>
-        愛知県名古屋市 鶴舞DAYTRIP、K.D ハポンの両ライブハウス継続のための支援
-      </center>
+        <SectionTitle>PURPOSE</SectionTitle>
 
-      <center>
-        ここに画像(21時までに貼る)
-        <br />
-        <a href="https://www.daytrip.club/" target="_blank">
-          鶴舞DAYTRIPのHPを見る
-        </a>
-      </center>
+        <center style={{ marginBottom: 26 }}>
+          愛知県名古屋市 鶴舞DAYTRIP、K.D ハポンの両ライブハウス継続のための支援
+        </center>
 
-      <center>
-        ここに画像
-        <br />
-        <a href="http://www2.odn.ne.jp/kdjapon/" target="_blank">
-          K.DハポンのHPを見る
-        </a>
-      </center>
+        <center>
+          ここに画像(21時までに貼る)
+          <br />
+          <a href="https://www.daytrip.club/" target="_blank">
+            鶴舞DAYTRIPのHPを見る
+          </a>
+        </center>
 
-      <SectionTitle>RELEASE INFORMATION</SectionTitle>
+        <center>
+          ここに画像
+          <br />
+          <a href="http://www2.odn.ne.jp/kdjapon/" target="_blank">
+            K.DハポンのHPを見る
+          </a>
+        </center>
 
-      <CenterP>
-        配信開始予定日：5/1（金） <br />
-        配信媒体：bandcamp、各種サブスクリプション <br />
-        支援方法：bandcampでのアルバムの購入、サブスクリプションでの再生、各種投げ銭
-      </CenterP>
+        <SectionTitle>RELEASE INFORMATION</SectionTitle>
 
-      <SectionTitle>MESSAGE</SectionTitle>
+        <CenterP>
+          配信開始予定日：5/1（金） <br />
+          配信媒体：bandcamp、各種サブスクリプション <br />
+          支援方法：bandcampでのアルバムの購入、サブスクリプションでの再生、各種投げ銭
+        </CenterP>
 
-      <Message>
-        <MessageName>トモヒロツジ / cllctv.</MessageName>
-        {`DAYTRIPは前店長である八木さんの頃から、バンド活動の拠点としてずっとお世話になってきた場所でした。自主企画はいつもDAYTRIPでしたし、普段のブッキングライブでも多くのバンドとつながりを結んでくれた、まさに自分の音楽活動の原点と言える場所です。`}
-        <br />
-        {`ハポンは、cllctv.を初めてからずっとイベントで使わせてもらっているライブハウスで、 モモジさんの人柄が生み出す温かなベニューはまさに唯一無二の居場所です。`}
-        <br />
-        {`今回のこの企画が、この両ライブハウスに所縁のある多くの人をつなげ、その思いを形にして受けた恩を返す企画となれることを願います。皆様の賛同をお待ちしています。`}
-      </Message>
+        <SectionTitle>MESSAGE</SectionTitle>
 
-      <Message>
-        <MessageName>ykpythemind（伊藤薫人） / 猫を堕ろす</MessageName>
-        {`俺が名古屋でライブハウスというものに出ようと思ったとき、ライブハウスの偉そうな人に説教されそうとか、上下関係とか厳しそうみたいなイメージで気が引けた記憶がある。 `}
-        {`DaytripとKDハポンはそんなイメージを覆してくれたライブハウスだ。まさか自分がこんなにライブを見に行くようになるとは思わなかった。Daytrip/ハポン（位置的には向かい合わせにありますね）の近くに引っ越したときはワクワクしながら自転車を漕いで通った。`}
-        <br />
-        ハポンは結構アコースティックな感じのハコなので、自分みたいなバンドをやってる人間が出るところではないのかもと思っていたが、店長のモモジさんは何故か激推ししてくれている。
-        モモジさんが「このCDをユキトくんが自分でミックスしたのすごいね！車で聞いても他のCDと同じくらい音圧あって良い！」と褒めてくださったとき、まさに意識していたことを褒められたので一生付いていきますと思ったものだ。(車での音圧感を褒められるのは新鮮です)
-        <br />
-        Daytripとハポンにはとても感謝しているし、これからも遊びたいと思ってるし、今回こういう形でサポートすることになった。皆さんも力を貸してくれると嬉しい。
-      </Message>
+        <Message>
+          <MessageName>トモヒロツジ / cllctv.</MessageName>
+          {`DAYTRIPは前店長である八木さんの頃から、バンド活動の拠点としてずっとお世話になってきた場所でした。自主企画はいつもDAYTRIPでしたし、普段のブッキングライブでも多くのバンドとつながりを結んでくれた、まさに自分の音楽活動の原点と言える場所です。`}
+          <br />
+          {`ハポンは、cllctv.を初めてからずっとイベントで使わせてもらっているライブハウスで、 モモジさんの人柄が生み出す温かなベニューはまさに唯一無二の居場所です。`}
+          <br />
+          {`今回のこの企画が、この両ライブハウスに所縁のある多くの人をつなげ、その思いを形にして受けた恩を返す企画となれることを願います。皆様の賛同をお待ちしています。`}
+        </Message>
 
-      <SectionTitle>STAFF</SectionTitle>
+        <Message>
+          <MessageName>ykpythemind（伊藤薫人） / 猫を堕ろす</MessageName>
+          {`俺が名古屋でライブハウスというものに出ようと思ったとき、ライブハウスの偉そうな人に説教されそうとか、上下関係とか厳しそうみたいなイメージで気が引けた記憶がある。 `}
+          {`DaytripとKDハポンはそんなイメージを覆してくれたライブハウスだ。まさか自分がこんなにライブを見に行くようになるとは思わなかった。Daytrip/ハポン（位置的には向かい合わせにありますね）の近くに引っ越したときはワクワクしながら自転車を漕いで通った。`}
+          <br />
+          ハポンは結構アコースティックな感じのハコなので、自分みたいなバンドをやってる人間が出るところではないのかもと思っていたが、店長のモモジさんは何故か激推ししてくれている。
+          モモジさんが「このCDをユキトくんが自分でミックスしたのすごいね！車で聞いても他のCDと同じくらい音圧あって良い！」と褒めてくださったとき、まさに意識していたことを褒められたので一生付いていきますと思ったものだ。(車での音圧感を褒められるのは新鮮です)
+          <br />
+          Daytripとハポンにはとても感謝しているし、これからも遊びたいと思ってるし、今回こういう形でサポートすることになった。皆さんも力を貸してくれると嬉しい。
+        </Message>
 
-      <center>
-        文責：辻知広
-        <br />
-        写真提供：志賀正太郎
-        <br />
-        powered by{" "}
-        <a href="http://cllctv-jp.com" target="_blank">
-          cllctv.
-        </a>
-      </center>
-      <div
-        style={{
-          width: "20%",
-          minWidth: 50,
-          textAlign: "center",
-          margin: "10px auto 0",
-        }}
-      >
-        <CllctvImage />
-      </div>
-      <center style={{ marginTop: 16 }}>
-        連絡先: cllctv.rvw@gmail.com
-        <br />
-        トモヒロツジ (
-        <a href="https://twitter.com/tomo_at" target="_blank">
-          @tomo_at
-        </a>
-        )
-        <br />
-        ykpythemind (
-        <a href="https://twitter.com/ykpythemind" target="_blank">
-          @ykpythemind
-        </a>
-        )
-      </center>
+        <SectionTitle>STAFF</SectionTitle>
 
-      <Gokakunin>ご確認ください</Gokakunin>
-
-      <Small>
-        <p>
-          {`*本企画はDAYTRIP 村田さん、K.D ハポン モモジさんの両名のご賛同をいただいていますが、あくまでも辻、伊藤両名による企画となります。そのため、本企画に対するご意見は辻、伊藤へ よろしくお願いいたします。`}
-        </p>
-        <p>
-          {`*本企画は辻、伊藤のいずれかと親交のある方々を中心にお声がけしています。両名いずれかと親交があり、参加を希望される方がいらっしゃいましたら、お手数ではありますが、ご連絡をお願いいたします。`}
-        </p>
-      </Small>
-
-      <footer
-        style={{
-          marginTop: 90,
-          marginLeft: "auto",
-          marginRight: "auto",
-          marginBottom: 20,
-          textAlign: "right",
-        }}
-      >
-        © 2020
-        {` `}
-        <a
-          href="http://cllctv-jp.com"
-          target="_blank"
-          rel="noopener noreferrer"
+        <center>
+          文責：辻知広
+          <br />
+          写真提供：志賀正太郎
+          <br />
+          powered by{" "}
+          <a href="http://cllctv-jp.com" target="_blank">
+            cllctv.
+          </a>
+        </center>
+        <div
+          style={{
+            width: "20%",
+            minWidth: 50,
+            textAlign: "center",
+            margin: "10px auto 0",
+          }}
         >
-          cllctv.
-        </a>
-      </footer>
+          <CllctvImage />
+        </div>
+        <center style={{ marginTop: 16 }}>
+          連絡先: cllctv.rvw@gmail.com
+          <br />
+          トモヒロツジ (
+          <a href="https://twitter.com/tomo_at" target="_blank">
+            @tomo_at
+          </a>
+          )
+          <br />
+          ykpythemind (
+          <a href="https://twitter.com/ykpythemind" target="_blank">
+            @ykpythemind
+          </a>
+          )
+        </center>
 
-      <div style={{ marginTop: 30, marginBottom: 30 }}>
-        <AAAImage />
-      </div>
-    </Container>
-  </Layout>
-)
+        <Gokakunin>ご確認ください</Gokakunin>
+
+        <Small>
+          <p>
+            {`*本企画はDAYTRIP 村田さん、K.D ハポン モモジさんの両名のご賛同をいただいていますが、あくまでも辻、伊藤両名による企画となります。そのため、本企画に対するご意見は辻、伊藤へ よろしくお願いいたします。`}
+          </p>
+          <p>
+            {`*本企画は辻、伊藤のいずれかと親交のある方々を中心にお声がけしています。両名いずれかと親交があり、参加を希望される方がいらっしゃいましたら、お手数ではありますが、ご連絡をお願いいたします。`}
+          </p>
+        </Small>
+
+        <footer
+          style={{
+            marginTop: 90,
+            marginLeft: "auto",
+            marginRight: "auto",
+            marginBottom: 20,
+            textAlign: "right",
+          }}
+        >
+          © 2020
+          {` `}
+          <a
+            href="http://cllctv-jp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            cllctv.
+          </a>
+        </footer>
+
+        <div style={{ marginTop: 30, marginBottom: 30 }}>
+          <AAAImage />
+        </div>
+      </Container>
+    </Layout>
+  )
+}
 
 export default IndexPage
