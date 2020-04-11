@@ -23,21 +23,30 @@ const Layout = ({ children }) => {
     }
   `)
 
+  console.log(data)
+
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 960,
+          maxWidth: 760,
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
+          © 2020
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a
+            href="http://cllctv-jp.com"
+            href="http://cllctv-jp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            cllctv.
+          </a>
         </footer>
       </div>
     </>
