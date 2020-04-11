@@ -62,6 +62,25 @@ const CenterP = styled.p`
   margin-top: 0;
 `
 
+const MessageName = styled.h3`
+  font-size: 24pt;
+  font-weight: bold;
+
+  @media (max-width: 768px) {
+    font-size: 19pt;
+  }
+`
+
+const Gokakunin = styled.h3`
+  margin-top: 50px;
+  font-size: 24pt;
+  font-weight: bold;
+
+  @media (max-width: 768px) {
+    font-size: 19pt;
+  }
+`
+
 const Center = ({ message }) => {
   return (
     <CenterP>
@@ -137,12 +156,12 @@ const IndexPage = () => (
       <SectionTitle>MESSAGE</SectionTitle>
 
       <Message>
-        <h3>トモヒロツジ / cllctv.</h3>
+        <MessageName>トモヒロツジ / cllctv.</MessageName>
         {TTMessage}
       </Message>
 
       <Message>
-        <h3>ykpythemind（伊藤薫人） / 猫を堕ろす</h3>
+        <MessageName>ykpythemind（伊藤薫人） / 猫を堕ろす</MessageName>
         {YKMessage}
       </Message>
 
@@ -185,7 +204,7 @@ const IndexPage = () => (
         )
       </CenterP>
 
-      <h3 style={{ marginTop: 70 }}>ご確認ください</h3>
+      <Gokakunin>ご確認ください</Gokakunin>
 
       <p>
         *本企画はDAYTRIP 村田さん、K.D ハポン
@@ -199,7 +218,7 @@ const IndexPage = () => (
         ご連絡をお願いいたします。
       </p>
 
-      <div style={{ marginTop: 70, marginBottom: 30 }}>
+      <div style={{ marginTop: 90, marginBottom: 30 }}>
         <AAAImage />
       </div>
     </Container>
