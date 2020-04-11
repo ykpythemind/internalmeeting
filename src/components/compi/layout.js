@@ -7,48 +7,34 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import "./layout.css"
+// import "./compi_layout.css"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
-  console.log(data)
-
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
+      <main>{children}</main>
+      <footer
         style={{
-          margin: `0 auto`,
+          marginTop: 30,
+          marginLeft: "auto",
+          marginRight: "auto",
+          marginBottom: 30,
+          width: "90%",
           maxWidth: 760,
-          padding: `0 1.0875rem 1.45rem`,
+          textAlign: "right",
         }}
       >
-        <main>{children}</main>
-        <footer>
-          © 2020
-          {` `}
-          <a
-            href="http://cllctv-jp.com"
-            href="http://cllctv-jp.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            cllctv.
-          </a>
-        </footer>
-      </div>
+        © 2020
+        {` `}
+        <a
+          href="http://cllctv-jp.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          cllctv.
+        </a>
+      </footer>
     </>
   )
 }

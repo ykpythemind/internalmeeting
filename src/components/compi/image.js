@@ -13,20 +13,47 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
+const query = graphql`
+  query {
+    logo: file(relativePath: { eq: "imc.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
-  `)
+    aaa: file(relativePath: { eq: "aaa.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+export const CompiLogoImage = () => {
+  const data = useStaticQuery(query)
+
+  return (
+    <Img
+      fluid={data.logo.childImageSharp.fluid}
+      loading="auto"
+      alt="Internal Meeting Compilation"
+      fadeIn={false}
+    />
+  )
 }
 
-export default Image
+export const AAAImage = () => {
+  const data = useStaticQuery(query)
+
+  return (
+    <Img
+      fluid={data.aaa.childImageSharp.fluid}
+      loading="auto"
+      alt="Internal Meeting Compilation - Access All Area"
+      fadeIn={false}
+    />
+  )
+}
