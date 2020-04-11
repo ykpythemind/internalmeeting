@@ -165,8 +165,24 @@ const IndexPage = () => (
 
       <SectionTitle>PURPOSE</SectionTitle>
 
-      <center>
+      <center style={{ marginBottom: 26 }}>
         愛知県名古屋市 鶴舞DAYTRIP、K.D ハポンの両ライブハウス継続のための支援
+      </center>
+
+      <center>
+        ここに画像(21時までに貼る)
+        <br />
+        <a href="https://www.daytrip.club/" target="_blank">
+          鶴舞DAYTRIPのHPを見る
+        </a>
+      </center>
+
+      <center>
+        ここに画像
+        <br />
+        <a href="http://www2.odn.ne.jp/kdjapon/" target="_blank">
+          K.DハポンのHPを見る
+        </a>
       </center>
 
       <SectionTitle>RELEASE INFORMATION</SectionTitle>
