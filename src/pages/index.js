@@ -1,6 +1,6 @@
 import React from "react"
-// import { Link } from "gatsby"
-import styled from "styled-components"
+import { Link } from "gatsby"
+import styled, { createGlobalStyle } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -28,11 +28,39 @@ const Cllctv = styled.a`
   height: 50px;
 `
 
+const IndexGlobal = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    color: #222;
+    background-color: #fff;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+  a:link {
+    color: #222;
+  }
+  a:hover {
+    color: #222;
+  }
+  a:visited {
+    color: #222;
+  }
+`
+
 const IndexPage = () => {
   return (
     <>
+      <IndexGlobal />
       <Main>
-        <div>INTERNAL MEETING</div>
+        <div>
+          <Link to="/compi">INTERNAL MEETING</Link>
+        </div>
       </Main>
       <Cllctv
         href="http://cllctv-jp.com"
