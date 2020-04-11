@@ -58,6 +58,16 @@ const SectionTitle = styled.h2`
   }
 `
 
+const CompiLogoOuter = styled.div`
+  margin-top: 70px;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+  }
+`
+
 const CenterP = styled.p`
   text-align: center;
   margin-top: 0;
@@ -125,9 +135,9 @@ const IndexPage = () => (
     <Global />
     <Container>
       <SEO title="Internal Meeting Compilation" />
-      <div style={{ marginTop: 70, marginBottom: 50, paddingBottom: 30 }}>
+      <CompiLogoOuter>
         <CompiLogoImage />
-      </div>
+      </CompiLogoOuter>
 
       <SectionTitle>CONCEPT</SectionTitle>
 
