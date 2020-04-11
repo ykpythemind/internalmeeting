@@ -1,0 +1,48 @@
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+
+/*
+ * This component is built using `gatsby-image` to automatically serve optimized
+ * images with lazy loading and reduced file sizes. The image is loaded using a
+ * `useStaticQuery`, which allows us to load the image from directly within this
+ * component, rather than having to pass the image data down from pages.
+ *
+ * For more information, see the docs:
+ * - `gatsby-image`: https://gatsby.dev/gatsby-image
+ * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
+ */
+
+const query = graphql`
+  query {
+    logo: file(relativePath: { eq: "imc.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    aaa: file(relativePath: { eq: "aaa.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+
+const AAAImage = () => {
+  const data = useStaticQuery(query)
+
+  return (
+    <Img
+      fluid={data.aaa.childImageSharp.fluid}
+      loading="auto"
+      alt="Internal Meeting Compilation - Access All Area"
+      fadeIn={false}
+    />
+  )
+}
+
+export default AAAImage

@@ -32,7 +32,7 @@ const query = graphql`
   }
 `
 
-export const CompiLogoImage = () => {
+const CompiLogoImage = () => {
   const data = useStaticQuery(query)
 
   return (
@@ -45,15 +45,4 @@ export const CompiLogoImage = () => {
   )
 }
 
-export const AAAImage = () => {
-  const data = useStaticQuery(query)
-
-  return (
-    <Img
-      fluid={data.aaa.childImageSharp.fluid}
-      loading="auto"
-      alt="Internal Meeting Compilation - Access All Area"
-      fadeIn={false}
-    />
-  )
-}
+export default CompiLogoImage
