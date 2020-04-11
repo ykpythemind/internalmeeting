@@ -85,11 +85,12 @@ const Gokakunin = styled.h3`
 const Center = ({ message }) => {
   return (
     <CenterP>
-      {message.split("\n").map((e, i) => (
+      {message}
+      {/* {message.split("\n").map((e, i) => (
         <React.Fragment key={i}>
           {e} <br />
         </React.Fragment>
-      ))}
+      ))} */}
     </CenterP>
   )
 }
@@ -168,7 +169,7 @@ const IndexPage = () => (
 
       <SectionTitle>STAFF</SectionTitle>
 
-      <CenterP>
+      <center>
         文責：辻知広
         <br />
         写真提供：志賀正太郎
@@ -177,7 +178,7 @@ const IndexPage = () => (
         <a href="http://cllctv-jp.com" target="_blank">
           cllctv.
         </a>
-      </CenterP>
+      </center>
       <div
         style={{
           width: "20%",
@@ -188,8 +189,7 @@ const IndexPage = () => (
       >
         <CllctvImage />
       </div>
-      <CenterP>
-        <br />
+      <center style={{ marginTop: 16 }}>
         連絡先: cllctv.rvw@gmail.com
         <br />
         トモヒロツジ (
@@ -203,7 +203,7 @@ const IndexPage = () => (
           @ykpythemind
         </a>
         )
-      </CenterP>
+      </center>
 
       <Gokakunin>ご確認ください</Gokakunin>
 
@@ -219,7 +219,27 @@ const IndexPage = () => (
         ご連絡をお願いいたします。
       </p>
 
-      <div style={{ marginTop: 90, marginBottom: 30 }}>
+      <footer
+        style={{
+          marginTop: 90,
+          marginLeft: "auto",
+          marginRight: "auto",
+          marginBottom: 20,
+          textAlign: "right",
+        }}
+      >
+        © 2020
+        {` `}
+        <a
+          href="http://cllctv-jp.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          cllctv.
+        </a>
+      </footer>
+
+      <div style={{ marginTop: 30, marginBottom: 30 }}>
         <AAAImage />
       </div>
     </Container>
