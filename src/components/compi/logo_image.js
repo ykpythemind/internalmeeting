@@ -15,14 +15,7 @@ import Img from "gatsby-image"
 
 const query = graphql`
   query {
-    logo: file(relativePath: { eq: "imc.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    aaa: file(relativePath: { eq: "aaa.png" }) {
+    logo: file(relativePath: { eq: "imc_2x.png" }) {
       childImageSharp {
         fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid

@@ -17,6 +17,7 @@ const Global = createGlobalStyle`
   }
   body {
     color: #222;
+    background-color: #fff;
   }
 `
 
