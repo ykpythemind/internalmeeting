@@ -107,19 +107,6 @@ const Gokakunin = styled.h3`
   }
 `
 
-const Center = ({ message }) => {
-  return (
-    <CenterP>
-      {message}
-      {/* {message.split("\n").map((e, i) => (
-        <React.Fragment key={i}>
-          {e} <br />
-        </React.Fragment>
-      ))} */}
-    </CenterP>
-  )
-}
-
 const Message = styled.div`
   border: 4px solid #222;
   padding: 16px;
@@ -165,9 +152,15 @@ const IndexPage = () => (
       <CenterP style={{ marginTop: 30 }}>
         発起人
         <br />
-        トモヒロツジ / <a href="http://cllctv-jp.com">cllctv.</a>
+        トモヒロツジ /{" "}
+        <a href="http://cllctv-jp.com" target="_blank">
+          cllctv.
+        </a>
         <br />
-        ykpythemind（伊藤薫人）/ <a href="https://nkwors.com">猫を堕ろす</a>
+        ykpythemind（伊藤薫人）/{" "}
+        <a href="https://nkwors.com" target="_blank">
+          猫を堕ろす
+        </a>
       </CenterP>
 
       <SectionTitle>PURPOSE</SectionTitle>
