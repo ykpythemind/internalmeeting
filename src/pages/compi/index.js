@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
 import Layout from "../../components/compi/layout"
 import CompiLogoImage from "../../components/compi/logo_image"
@@ -8,6 +8,7 @@ import SEO from "../../components/compi/seo"
 import styled, { createGlobalStyle } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import Slide from "../../components/compi/slide"
 
 const Global = createGlobalStyle`
   * {
@@ -188,6 +189,7 @@ const IndexPage = () => {
         </center>
 
         <center>
+          <Slide house="day"></Slide>
           ここに画像(21時までに貼る)
           <br />
           <a href="https://www.daytrip.club/" target="_blank">
@@ -197,6 +199,7 @@ const IndexPage = () => {
 
         <center>
           ここに画像
+          <Slide house="hapon"></Slide>
           <br />
           <a href="http://www2.odn.ne.jp/kdjapon/" target="_blank">
             K.DハポンのHPを見る
