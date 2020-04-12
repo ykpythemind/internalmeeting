@@ -98,6 +98,15 @@ const MessageName = styled.h3`
   }
 `
 
+const HouseName = styled.h3`
+  font-size: 24pt;
+  font-weight: bold;
+
+  @media (max-width: 768px) {
+    font-size: 19pt;
+  }
+`
+
 const Gokakunin = styled.h3`
   margin-top: 50px;
   font-size: 18pt;
@@ -184,21 +193,21 @@ const IndexPage = () => {
 
         <SectionTitle>PURPOSE</SectionTitle>
 
-        <center style={{ marginBottom: 26 }}>
+        <center style={{ marginBottom: 45 }}>
           愛知県名古屋市 鶴舞DAYTRIP、K.D ハポンの両ライブハウス継続のための支援
         </center>
 
-        <center>
+        <HouseName>鶴舞DAYTRIP</HouseName>
+        <center style={{ marginBottom: 40 }}>
           <Slide house="day"></Slide>
-          ここに画像(21時までに貼る)
           <br />
           <a href="https://www.daytrip.club/" target="_blank">
             鶴舞DAYTRIPのHPを見る
           </a>
         </center>
 
+        <HouseName>K.Dハポン</HouseName>
         <center>
-          ここに画像
           <Slide house="hapon"></Slide>
           <br />
           <a href="http://www2.odn.ne.jp/kdjapon/" target="_blank">

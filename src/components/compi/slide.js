@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import styled from "styled-components"
 
 const query = graphql`
   query {
@@ -21,6 +22,25 @@ const query = graphql`
   }
 `
 
+const Photo = ({ fluid }) => {
+  return <Img fluid={fluid} loading="auto" alt="photo" fadeIn={false} />
+}
+
+const Dived = styled.div`
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    margin-top: 15px;
+  }
+`
+
+const Half = styled.div`
+  width: 49%;
+`
+
 const Slide = ({ house }) => {
   // house is `day` or `hapon`
   const data = useStaticQuery(query)
@@ -31,16 +51,22 @@ const Slide = ({ house }) => {
     return e.node.childImageSharp.fluid.src.includes(house)
   })
 
-  console.log(images)
+  const im1 = images[0].node.childImageSharp.fluid
+  const im2 = images[1].node.childImageSharp.fluid
+  const im3 = images[2].node.childImageSharp.fluid
 
   return (
-    <div>a</div>
-    // <Img
-    //   // fluid={data.logo.childImageSharp.fluid}
-    //   loading="auto"
-    //   alt="Internal Meeting Compilation"
-    //   fadeIn={false}
-    // />
+    <div>
+      <Photo fluid={im1}></Photo>
+      <Dived>
+        <Half>
+          <Photo fluid={im2}></Photo>
+        </Half>
+        <Half>
+          <Photo fluid={im3}></Photo>
+        </Half>
+      </Dived>
+    </div>
   )
 }
 
