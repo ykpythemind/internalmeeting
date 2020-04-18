@@ -1,5 +1,5 @@
 import React from "react"
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 
 import Layout from "../../components/compi/layout"
 import CompiLogoImage from "../../components/compi/logo_image"
@@ -227,6 +227,10 @@ const IndexPage = () => {
         <SectionTitle>ARTISTS</SectionTitle>
 
         <Artists></Artists>
+
+        <CenterP style={{ marginTop: 20 }}>
+          <Link to="/compi/artists">アーティストのサポートコメントを見る</Link>
+        </CenterP>
 
         <SectionTitle>MESSAGE</SectionTitle>
 
