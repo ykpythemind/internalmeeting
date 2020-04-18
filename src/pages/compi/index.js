@@ -11,7 +11,7 @@ import Img from "gatsby-image"
 import Slide from "../../components/compi/slide"
 import { Artists } from "../../components/compi/artist"
 
-const Global = createGlobalStyle`
+export const Global = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
@@ -45,7 +45,7 @@ const Global = createGlobalStyle`
   //     }
   //   } */
 
-const Container = styled.div`
+export const Container = styled.div`
   font-size: 14pt;
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
     "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
@@ -59,7 +59,7 @@ const Container = styled.div`
   }
 `
 
-const SectionTitle = styled.h2`
+export const SectionTitle = styled.h2`
   margin: 50px auto 30px auto;
   text-align: center;
   padding: 0;

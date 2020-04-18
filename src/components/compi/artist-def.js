@@ -1,3 +1,14 @@
+export const PublishedArtists = [
+  "qulague",
+  "goodbye",
+  "muscle",
+  "frenzy",
+  "sedwig",
+  "goodbye",
+  "muscle",
+  "zerone",
+]
+
 export const ArtistDefinitions = [
   {
     id: "qulague",
@@ -24,6 +35,20 @@ export const ArtistDefinitions = [
     id: "frenzy",
     img: "frenzy.jpg",
     name: "frenzy cabbage",
+    message:
+      "身近にこういう企画をしてくれる人が居るということがとても心強いです。お世話になった素敵な場所を失くさない為に、少しでも力になれればと思います。",
+  },
+  {
+    id: "sedwig",
+    img: "sedwig.jpg",
+    name: "Sedwig",
+    message:
+      "身近にこういう企画をしてくれる人が居るということがとても心強いです。お世話になった素敵な場所を失くさない為に、少しでも力になれればと思います。",
+  },
+  {
+    id: "zerone",
+    img: "zerone.jpg",
+    name: "ゼローネ",
     message:
       "身近にこういう企画をしてくれる人が居るということがとても心強いです。お世話になった素敵な場所を失くさない為に、少しでも力になれればと思います。",
   },
