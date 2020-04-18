@@ -28,7 +28,7 @@ const ArtistSection = styled.div`
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  justify-content: space-between;
+  // justify-content: space-between;
 `
 
 export const Artists = () => {
@@ -43,9 +43,13 @@ export const Artists = () => {
 
 const ArtistBoxStyle = styled.div`
   margin-bottom: 10px;
-  width: calc(25% - 4px);
+  margin-right: 5px;
+  width: calc(25% - 6px);
 
   @media (max-width: 768px) {
+    padding-right: 5px;
+    margin-right: 0;
+    margin-bottom: 6px;
     width: calc(50% - 3px);
   }
 `
@@ -61,7 +65,7 @@ const ArtistImgStyle = styled.div`
   background-size: cover;
 
   @media (max-width: 768px) {
-    height: 100px;
+    height: 120px;
   }
 `
 
@@ -79,16 +83,15 @@ const ArtistBox = ({ artistId }) => {
       <div
         onClick={() => onclickArtistBox(artistId)}
         style={{ cursor: "pointer" }}
+        title={def.name}
       >
         <ArtistImgStyle url={image.src}></ArtistImgStyle>
-        {/* <h5>{def.name}</h5> */}
       </div>
     </ArtistBoxStyle>
   )
 }
 
 const onclickArtistBox = artistId => {
-  console.log(artistId)
   navigate(`/compi/artists/#${artistId}`)
 }
 
@@ -112,7 +115,22 @@ export const ArtistDetail = ({ artistId }) => {
     <ArtistDetailStyle>
       <h2 id={def.id}>{def.name}</h2>
       <Img fluid={image}></Img>
-      <p style={{ marginTop: 12 }}>{def.message}</p>
+      <p style={{ marginTop: 12 }}>{nl2br(def.message)}</p>
     </ArtistDetailStyle>
   )
+}
+
+const newlineRegex = /(\r\n|\r|\n)/g
+
+const nl2br = function(str) {
+  if (typeof str !== "string") {
+    return str
+  }
+
+  return str.split(newlineRegex).map(function(line, index) {
+    if (line.match(newlineRegex)) {
+      return React.createElement("br", { key: index })
+    }
+    return line
+  })
 }

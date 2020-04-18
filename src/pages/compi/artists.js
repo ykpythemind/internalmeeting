@@ -29,6 +29,7 @@ const ArtistsPage = () => {
           description={ogDescription}
         />
 
+        <br />
         <a href="/compi">トップへ戻る</a>
 
         <SectionTitle>ARTIST &amp; MESSAGES</SectionTitle>
