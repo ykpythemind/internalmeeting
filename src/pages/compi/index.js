@@ -9,6 +9,7 @@ import styled, { createGlobalStyle } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Slide from "../../components/compi/slide"
+import { Artists } from "../../components/compi/artist"
 
 const Global = createGlobalStyle`
   * {
@@ -222,6 +223,10 @@ const IndexPage = () => {
           配信媒体：bandcamp、各種サブスクリプション <br />
           支援方法：bandcampでのアルバムの購入、サブスクリプションでの再生、各種投げ銭
         </CenterP>
+
+        <SectionTitle>ARTISTS</SectionTitle>
+
+        <Artists></Artists>
 
         <SectionTitle>MESSAGE</SectionTitle>
 
