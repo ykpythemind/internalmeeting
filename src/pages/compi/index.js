@@ -170,6 +170,10 @@ const IndexPage = () => {
           <CompiLogoImage />
         </CompiLogoOuter>
 
+        <center style={{ fontSize: 13 }}>
+          2020/4/19 第一弾アーティストとメッセージを公開しました。{" "}
+        </center>
+
         <SectionTitle>CONCEPT</SectionTitle>
 
         <CenterP>
@@ -229,7 +233,7 @@ const IndexPage = () => {
         <Artists></Artists>
 
         <CenterP style={{ marginTop: 20 }}>
-          <Link to="/compi/artists">アーティストのサポートコメントを見る</Link>
+          <Link to="/compi/artists">アーティストのメッセージを見る</Link>
         </CenterP>
 
         <SectionTitle>MESSAGE</SectionTitle>
