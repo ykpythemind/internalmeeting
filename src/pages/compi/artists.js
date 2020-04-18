@@ -2,13 +2,13 @@ import React from "react"
 // import { Link } from "gatsby"
 
 import Layout from "../../components/compi/layout"
-import CompiLogoImage from "../../components/compi/logo_image"
-import AAAImage from "../../components/compi/aaa_image"
+// import CompiLogoImage from "../../components/compi/logo_image"
+// import AAAImage from "../../components/compi/aaa_image"
 import SEO from "../../components/compi/seo"
-import styled, { createGlobalStyle } from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
+// import styled, { createGlobalStyle } from "styled-components"
+// import { useStaticQuery, graphql } from "gatsby"
 
-import { ArtistDetail } from "../../components/compi/artist"
+import { ArtistDetail } from "../../components/compi/artist-detail"
 import { PublishedArtists } from "../../components/compi/artist-def"
 
 import { Global, Container, SectionTitle } from "./index"
