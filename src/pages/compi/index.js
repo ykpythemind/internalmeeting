@@ -1,5 +1,5 @@
 import React from "react"
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 
 import Layout from "../../components/compi/layout"
 import CompiLogoImage from "../../components/compi/logo_image"
@@ -9,8 +9,9 @@ import styled, { createGlobalStyle } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Slide from "../../components/compi/slide"
+import { Artists } from "../../components/compi/artist"
 
-const Global = createGlobalStyle`
+export const Global = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
@@ -44,7 +45,7 @@ const Global = createGlobalStyle`
   //     }
   //   } */
 
-const Container = styled.div`
+export const Container = styled.div`
   font-size: 14pt;
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
     "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
@@ -58,7 +59,7 @@ const Container = styled.div`
   }
 `
 
-const SectionTitle = styled.h2`
+export const SectionTitle = styled.h2`
   margin: 50px auto 30px auto;
   text-align: center;
   padding: 0;
@@ -169,6 +170,10 @@ const IndexPage = () => {
           <CompiLogoImage />
         </CompiLogoOuter>
 
+        <center style={{ fontSize: 13 }}>
+          2020/4/19 第一弾アーティストとメッセージを公開しました。{" "}
+        </center>
+
         <SectionTitle>CONCEPT</SectionTitle>
 
         <CenterP>
@@ -221,6 +226,14 @@ const IndexPage = () => {
           配信開始予定日：5/1（金） <br />
           配信媒体：bandcamp、各種サブスクリプション <br />
           支援方法：bandcampでのアルバムの購入、サブスクリプションでの再生、各種投げ銭
+        </CenterP>
+
+        <SectionTitle>ARTISTS</SectionTitle>
+
+        <Artists></Artists>
+
+        <CenterP style={{ marginTop: 20 }}>
+          <Link to="/compi/artists">アーティストのメッセージを見る</Link>
         </CenterP>
 
         <SectionTitle>MESSAGE</SectionTitle>
