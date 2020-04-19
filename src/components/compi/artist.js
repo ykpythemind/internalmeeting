@@ -50,7 +50,12 @@ const ArtistBoxStyle = styled.div`
     padding-right: 5px;
     margin-right: 0;
     margin-bottom: 6px;
-    width: calc(50% - 3px);
+    width: 50%;
+
+    :nth-child(2n) {
+      padding-right: 0px;
+      margin-right: 0px;
+    }
   }
 `
 
