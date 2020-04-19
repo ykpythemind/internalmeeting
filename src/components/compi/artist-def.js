@@ -13,7 +13,7 @@ export const PublishedArtists = [
   "mebae",
   "yuinisio",
   "hirotyo",
-  // "nkwors"
+  "nkwors",
 ]
 
 export const ArtistDefinitions = [
@@ -238,41 +238,15 @@ export const ArtistDefinitions = [
     また、ライブハウスでお会いしましょう。`,
   },
   {
+    id: "nkwors",
+    img: "nkwors.jpg",
+    name: "猫を堕ろす",
+    message: `大学のサークルで結成した我々ですが、初めてサークルから飛び出してライブした場所がKDハポンでした。なっちゃんが加入して初めてのライブもハポンだった...はずです。それからハポンにもデイトリップにも何度出演したかわかりません。沢山お世話になった、沢山の楽しい思い出のある二つのライブハウスの力に少しでもなれれば幸いです。`,
+  },
+  {
     id: "",
     img: "",
     name: "",
     message: ``,
   },
-]
-
-const ArtistId = [
-  "3cm",
-  "aysula",
-  "frenzy",
-  "fuzzklaxon",
-  "goodbye",
-  "hecatomb",
-  "hirotyo",
-  "iramina",
-  "katsuwe",
-  "kisimen",
-  "mebae",
-  "michikusa",
-  "modern",
-  "monaca",
-  "muscle",
-  "ogtk",
-  "ophill",
-  "pari",
-  "posake",
-  "qulague",
-  "sakae",
-  "sedwig",
-  "souvenir",
-  "sukidadramas",
-  "tamiw",
-  "tsubu",
-  "ulm",
-  "yuinisio",
-  "zerone",
 ]
