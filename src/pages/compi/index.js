@@ -51,7 +51,7 @@ export const Container = styled.div`
 `
 
 export const SectionTitle = styled.h2`
-  margin: 50px auto 30px auto;
+  margin: 55px auto 30px auto;
   text-align: center;
   padding: 0;
   font-size: 44pt;
@@ -63,7 +63,7 @@ export const SectionTitle = styled.h2`
 `
 
 const ReleaseInfoBox = styled.div`
-  margin: 50px auto 30px auto;
+  margin: 10px auto 30px auto;
 
   display: flex;
   flex-direction: row;
@@ -88,7 +88,7 @@ const SongStyle = styled.div`
   line-height: 1.6rem;
 
   @media (max-width: 768px) {
-    line-height: 1.1rem;
+    line-height: 1.3rem;
   }
 `
 
@@ -270,6 +270,9 @@ const IndexPage = () => {
 
         <CoverImage></CoverImage>
 
+        <center style={{ marginBottom: 20, marginTop: 30 }}>
+          <b>INTERNAL MEETING COMPILATION</b>
+        </center>
         <ReleaseInfoBox>
           <ReleaseInfoSong>
             {SongDef.slice(0, 15).map((e, i) => (
