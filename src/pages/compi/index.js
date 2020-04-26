@@ -217,7 +217,7 @@ const IndexPage = () => {
         </CompiLogoOuter>
 
         <center style={{ fontSize: 13 }}>
-          2020/4/26 第二弾アーティストと収録曲を公開しました。{" "}
+          2020/4/26 第二弾アーティストとアルバム情報を公開しました。
         </center>
 
         <SectionTitle>CONCEPT</SectionTitle>
