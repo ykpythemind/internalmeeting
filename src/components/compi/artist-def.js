@@ -14,6 +14,22 @@ export const PublishedArtists = [
   "yuinisio",
   "hirotyo",
   "nkwors",
+  "3cm",
+  "aysula",
+  "fuzzklaxon",
+  "modern",
+  "posake",
+  "sedwig",
+  "sukida",
+  "tamiw",
+  "ulm",
+  "katsuwe",
+  "souvenir",
+  "zerone",
+  "tsubu",
+  "pari",
+  "michikusa",
+  "kondo",
 ]
 
 export const ArtistDefinitions = [
@@ -101,7 +117,7 @@ export const ArtistDefinitions = [
   },
   {
     id: "fuzzklaxon",
-    img: "fuzzklaxon.png",
+    img: "fuzzklaxon.jpg",
     name: "FUZZKLAXON",
     message: `お世話になっているライブハウスに貢献できる場を与えていただいて感謝します。
     日常の中で大きい音をかき鳴らし、聴き、共有できる場所はライブハウスしかありません。
@@ -244,9 +260,69 @@ export const ArtistDefinitions = [
     message: `大学のサークルで結成した我々ですが、初めてサークルから飛び出してライブした場所がKDハポンでした。なっちゃんが加入して初めてのライブもハポンだった...はずです。それからハポンにもデイトリップにも何度出演したかわかりません。沢山お世話になった、沢山の楽しい思い出のある二つのライブハウスの力に少しでもなれれば幸いです。`,
   },
   {
+    id: "sukida",
+    img: "sukidadramas.jpg",
+    name: "sukida dramas",
+    message: `僕らの活動を語る上でハポンは絶対に外せません。
+    レコ発などのバンドの大事なタイミングではハポンでイベントを組み、楽しい思いや悔しい思いをたくさんして成長させてもらいました。
+    良い出会いもたくさんありました。この企画の発起人である薫人くんのバンド猫を堕ろすと初めて出会ったのもハポンでした。
+
+    名古屋の街にハポンが無いのは考えられません。
+    これからも、ずっとハポンで遊んでいたいです。ライブしたいし見たいし、カレーもガパオライスも食べたい。天井から聞こえる電車の音を聞いて「ああ、ハポンって良いなぁ〜」って早く思いたい。そのために全力で支援いたします。
+
+    sukida dramas一同`,
+  },
+  {
+    id: "pari",
+    img: "pari.jpg",
+    name: "Nishio Daisuke",
+    message: `今の自分を形成する沢山の思い出がある大好きな場所を守りたい、自分に出来る事は何かと考えていた時にお話を頂き、企画に参加させて頂きました。1日でも早くいつもの風景が戻って来る事を祈っています。`,
+  },
+  {
+    id: "kondo",
+    img: "kondo.jpg",
+    name: "近藤圭晃",
+    message: `ハポンにリスペクトを込めて一曲作りました。ハポンらぶ。`,
+  },
+  {
     id: "",
     img: "",
     name: "",
     message: ``,
   },
+]
+
+// prettier-ignore
+export const SongDef = [
+{num: 1, title: "ときめきリサーチ200X", artist: "猫を堕ろす" },
+{num: 2, title: "Coffee and Cigarettes (feat. ゆいにしお & masato yamashita)", artist: "KISIMEN" },
+{num: 3, title: "BLUE", artist: "sukida dramas" },
+{num: 4, title: "窓", artist: "スーベニア" },
+{num: 5, title: "岸辺", artist: "3cm.rhythm" },
+{num: 6, title: "Nexus", artist: "frenzy cabbage" },
+{num: 7, title: "勉強ばっかの青春じゃなくてよかった", artist: "ツブダオ" },
+{num: 8, title: "girlfriend", artist: "ゆいにしお" },
+{num: 9, title: "女装になったの", artist: "かつ江" },
+{num: 10, title: "summer time 団地", artist: "グッドバイモカ" },
+{num: 11, title: "呼びごえ", artist: "Sedwig" },
+{num: 12, title: "Stand Alone", artist: "Muscle Soul" },
+{num: 13, title: "Vast Perpetual Nothing", artist: "HECATOMB" },
+{num: 14, title: "Flood of Light", artist: "Ulm" },
+{num: 15, title: "靉光", artist: "Aysula" },
+{num: 16, title: "ウォーキング", artist: "Monaca yellow city" },
+{num: 17, title: "Perch", artist: "近藤圭晃" },
+{num: 18, title: "チャイニーズ・パンダ", artist: "POSAKE" },
+{num: 19, title: "kiló", artist: "qulague" },
+{num: 20, title: "エンチナーダ1", artist: "Ogawa & Tokoro" },
+{num: 21, title: "water (feat. sbe)", artist: "Nishio Daisuke" },
+{num: 22, title: "Stay Home", artist: "めばゑ" },
+{num: 23, title: "自宅", artist: "道草" },
+{num: 24, title: "彼女の景色", artist: "modern-times" },
+{num: 25, title: "幽鬱（スプリーン/ディスタンス)", artist: "ミヤフジサカヱ" },
+{num: 26, title: "NEVER BREED", artist: "FUZZKLAXON" },
+{num: 27, title: "ポメランク(Forever Mix)", artist: "こみゅにけいしょん" },
+{num: 28, title: "凪の向こう", artist: "ゼローネ" },
+{num: 29, title: "violet (feat. motokinsella)", artist: "ワタナベヒロト" },
+{num: 30, title: "Bloom", artist: "TAMIW" },
+{num: 31, title: "am5", artist: "ophill" },
 ]

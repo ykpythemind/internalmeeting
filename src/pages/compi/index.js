@@ -4,12 +4,14 @@ import { Link } from "gatsby"
 import Layout from "../../components/compi/layout"
 import CompiLogoImage from "../../components/compi/logo_image"
 import AAAImage from "../../components/compi/aaa_image"
+import { CoverImage } from "../../components/compi/cover_image"
 import SEO from "../../components/compi/seo"
 import styled, { createGlobalStyle } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Slide from "../../components/compi/slide"
 import { Artists } from "../../components/compi/artist"
+import { SongDef } from "../../components/compi/artist-def"
 
 export const Global = createGlobalStyle`
   * {
@@ -33,18 +35,6 @@ export const Global = createGlobalStyle`
   }
 `
 
-/*  // :root {
-  //     font-size: ${px2vw(24)};
-
-  //     @media (min-width: 768px) {
-  //       font-size: ${px2vw(18)};
-  //     }
-
-  //     @media (min-width: 1024px) {
-  //       font-size: ${px2vw(16)};
-  //     }
-  //   } */
-
 export const Container = styled.div`
   font-size: 14pt;
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
@@ -56,11 +46,12 @@ export const Container = styled.div`
 
   @media (max-width: 768px) {
     font-size: 12pt;
+    width: 94%;
   }
 `
 
 export const SectionTitle = styled.h2`
-  margin: 50px auto 30px auto;
+  margin: 55px auto 30px auto;
   text-align: center;
   padding: 0;
   font-size: 44pt;
@@ -70,6 +61,54 @@ export const SectionTitle = styled.h2`
     font-size: 25pt;
   }
 `
+
+const ReleaseInfoBox = styled.div`
+  margin: 10px auto 30px auto;
+
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`
+
+const ReleaseInfoSong = styled.div`
+  padding: 0px 7px 0 0;
+  width: calc(50% - 4px);
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`
+
+const SongStyle = styled.div`
+  display: flex;
+  font-size: 90%;
+  line-height: 1.6rem;
+
+  @media (max-width: 768px) {
+    line-height: 1.3rem;
+  }
+`
+
+const SongTitleStyle = styled.div`
+  width: 30px;
+  flex-shrink: 0;
+
+  @media (max-width: 768px) {
+    width: 30px;
+  }
+`
+
+const Song = ({ num, title, artist }) => {
+  return (
+    <SongStyle>
+      <SongTitleStyle>{num}.</SongTitleStyle>
+      <div>{`${title} - ${artist}`}</div>
+    </SongStyle>
+  )
+}
 
 const CompiLogoOuter = styled.div`
   margin-top: 70px;
@@ -141,6 +180,13 @@ const query = graphql`
         }
       }
     }
+    coverImage: file(relativePath: { eq: "compi/misc/imc_1600.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
 `
 
@@ -171,7 +217,7 @@ const IndexPage = () => {
         </CompiLogoOuter>
 
         <center style={{ fontSize: 13 }}>
-          2020/4/19 第一弾アーティストとメッセージを公開しました。{" "}
+          2020/4/26 第二弾アーティストとアルバム情報を公開しました。
         </center>
 
         <SectionTitle>CONCEPT</SectionTitle>
@@ -222,11 +268,46 @@ const IndexPage = () => {
 
         <SectionTitle>RELEASE INFORMATION</SectionTitle>
 
+        <CoverImage></CoverImage>
+
+        <center style={{ marginBottom: 20, marginTop: 30 }}>
+          <b>Internal Meeting Compilation</b>
+        </center>
+        <ReleaseInfoBox>
+          <ReleaseInfoSong>
+            {SongDef.slice(0, 15).map((e, i) => (
+              <Song
+                num={e.num}
+                title={e.title}
+                artist={e.artist}
+                key={i}
+              ></Song>
+            ))}
+          </ReleaseInfoSong>
+          <ReleaseInfoSong>
+            {SongDef.slice(15, 31).map((e, i) => (
+              <Song
+                num={e.num}
+                title={e.title}
+                artist={e.artist}
+                key={i}
+              ></Song>
+            ))}
+          </ReleaseInfoSong>
+        </ReleaseInfoBox>
+
         <CenterP>
           配信開始予定日：5/1（金） <br />
-          配信媒体：bandcamp、各種サブスクリプション <br />
-          支援方法：bandcampでのアルバムの購入、サブスクリプションでの再生、各種投げ銭
+          配信媒体：bandcamp、各種サブスクリプション
         </CenterP>
+
+        <div style={{ marginTop: 20 }}>
+          <h4>支援方法</h4>
+          配信：bandcampでのアルバムの購入、各種ストリーミングサービスでの再生
+          <br />
+          その他のご支援方法：直接のお振込など (
+          <Link to="/compi/support">詳細はこちらをご覧ください</Link>)
+        </div>
 
         <SectionTitle>ARTISTS</SectionTitle>
 
@@ -302,9 +383,7 @@ const IndexPage = () => {
           <p>
             {`*本企画はDAYTRIP 村田さん、K.D ハポン モモジさんの両名のご賛同をいただいていますが、あくまでも辻、伊藤両名による企画となります。そのため、本企画に対するご意見は辻、伊藤へ よろしくお願いいたします。`}
           </p>
-          <p>
-            {`*本企画は辻、伊藤のいずれかと親交のある方々を中心にお声がけしています。両名いずれかと親交があり、参加を希望される方がいらっしゃいましたら、お手数ではありますが、ご連絡をお願いいたします。`}
-          </p>
+          <p>{`*本企画による売上は全てDAYTRIP、K.D ハポンに寄付いたします。`}</p>
         </Small>
 
         <footer
