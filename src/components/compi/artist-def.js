@@ -14,6 +14,22 @@ export const PublishedArtists = [
   "yuinisio",
   "hirotyo",
   "nkwors",
+  "3cm",
+  "aysula",
+  "fuzzklaxon",
+  "modern",
+  "posake",
+  "sedwig",
+  "sukida",
+  "tamiw",
+  "ulm",
+  "katsuwe",
+  "souvenir",
+  "zerone",
+  "tsubu",
+  "pari",
+  "michikusa",
+  "kondo",
 ]
 
 export const ArtistDefinitions = [
@@ -101,7 +117,7 @@ export const ArtistDefinitions = [
   },
   {
     id: "fuzzklaxon",
-    img: "fuzzklaxon.png",
+    img: "fuzzklaxon.jpg",
     name: "FUZZKLAXON",
     message: `お世話になっているライブハウスに貢献できる場を与えていただいて感謝します。
     日常の中で大きい音をかき鳴らし、聴き、共有できる場所はライブハウスしかありません。
@@ -242,6 +258,31 @@ export const ArtistDefinitions = [
     img: "nkwors.jpg",
     name: "猫を堕ろす",
     message: `大学のサークルで結成した我々ですが、初めてサークルから飛び出してライブした場所がKDハポンでした。なっちゃんが加入して初めてのライブもハポンだった...はずです。それからハポンにもデイトリップにも何度出演したかわかりません。沢山お世話になった、沢山の楽しい思い出のある二つのライブハウスの力に少しでもなれれば幸いです。`,
+  },
+  {
+    id: "sukida",
+    img: "sukidadramas.jpg",
+    name: "sukida dramas",
+    message: `僕らの活動を語る上でハポンは絶対に外せません。
+    レコ発などのバンドの大事なタイミングではハポンでイベントを組み、楽しい思いや悔しい思いをたくさんして成長させてもらいました。
+    良い出会いもたくさんありました。この企画の発起人である薫人くんのバンド猫を堕ろすと初めて出会ったのもハポンでした。
+
+    名古屋の街にハポンが無いのは考えられません。
+    これからも、ずっとハポンで遊んでいたいです。ライブしたいし見たいし、カレーもガパオライスも食べたい。天井から聞こえる電車の音を聞いて「ああ、ハポンって良いなぁ〜」って早く思いたい。そのために全力で支援いたします。
+
+    sukida dramas一同`,
+  },
+  {
+    id: "pari",
+    img: "pari.jpg",
+    name: "Nishio Daisuke",
+    message: `今の自分を形成する沢山の思い出がある大好きな場所を守りたい、自分に出来る事は何かと考えていた時にお話を頂き、企画に参加させて頂きました。1日でも早くいつもの風景が戻って来る事を祈っています。`,
+  },
+  {
+    id: "kondo",
+    img: "kondo.jpg",
+    name: "近藤圭晃",
+    message: `ハポンにリスペクトを込めて一曲作りました。ハポンらぶ。`,
   },
   {
     id: "",
