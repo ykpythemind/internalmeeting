@@ -34,8 +34,8 @@ const ArtistSection = styled.div`
 export const Artists = () => {
   return (
     <ArtistSection>
-      {PublishedArtists.map(id => {
-        return <ArtistBox artistId={id}></ArtistBox>
+      {PublishedArtists.map((id, i) => {
+        return <ArtistBox artistId={id} key={i}></ArtistBox>
       })}
     </ArtistSection>
   )

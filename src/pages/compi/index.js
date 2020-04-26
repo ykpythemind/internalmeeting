@@ -10,6 +10,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Slide from "../../components/compi/slide"
 import { Artists } from "../../components/compi/artist"
+import { SongDef } from "../../components/compi/artist-def"
 
 export const Global = createGlobalStyle`
   * {
@@ -33,18 +34,6 @@ export const Global = createGlobalStyle`
   }
 `
 
-/*  // :root {
-  //     font-size: ${px2vw(24)};
-
-  //     @media (min-width: 768px) {
-  //       font-size: ${px2vw(18)};
-  //     }
-
-  //     @media (min-width: 1024px) {
-  //       font-size: ${px2vw(16)};
-  //     }
-  //   } */
-
 export const Container = styled.div`
   font-size: 14pt;
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
@@ -56,6 +45,7 @@ export const Container = styled.div`
 
   @media (max-width: 768px) {
     font-size: 12pt;
+    width: 94%;
   }
 `
 
@@ -70,6 +60,54 @@ export const SectionTitle = styled.h2`
     font-size: 25pt;
   }
 `
+
+const ReleaseInfoBox = styled.div`
+  margin: 50px auto 30px auto;
+
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`
+
+const ReleaseInfoSong = styled.div`
+  padding: 0px 7px 0 0;
+  width: calc(50% - 4px);
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`
+
+const SongStyle = styled.div`
+  display: flex;
+  font-size: 90%;
+  line-height: 1.6rem;
+
+  @media (max-width: 768px) {
+    line-height: 1.1rem;
+  }
+`
+
+const SongTitleStyle = styled.div`
+  width: 30px;
+  flex-shrink: 0;
+
+  @media (max-width: 768px) {
+    width: 30px;
+  }
+`
+
+const Song = ({ num, title, artist }) => {
+  return (
+    <SongStyle>
+      <SongTitleStyle>{num}.</SongTitleStyle>
+      <div>{`${title} - ${artist}`}</div>
+    </SongStyle>
+  )
+}
 
 const CompiLogoOuter = styled.div`
   margin-top: 70px;
@@ -141,6 +179,13 @@ const query = graphql`
         }
       }
     }
+    coverImage: file(relativePath: { eq: "compi/misc/imc_1600.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
 `
 
@@ -148,6 +193,18 @@ const CllctvImage = () => {
   const data = useStaticQuery(query)
   return (
     <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="cllctv" />
+  )
+}
+
+const CoverImage = () => {
+  const data = useStaticQuery(query)
+  return (
+    <a href="https://i.gyazo.com/de0c43340a7bd151c08618600b7c6aac.jpg">
+      <Img
+        fluid={data.coverImage.childImageSharp.fluid}
+        alt="Internal Meeting Compilation Jacket"
+      />
+    </a>
   )
 }
 
@@ -221,6 +278,31 @@ const IndexPage = () => {
         </center>
 
         <SectionTitle>RELEASE INFORMATION</SectionTitle>
+
+        <CoverImage></CoverImage>
+
+        <ReleaseInfoBox>
+          <ReleaseInfoSong>
+            {SongDef.slice(0, 15).map((e, i) => (
+              <Song
+                num={e.num}
+                title={e.title}
+                artist={e.artist}
+                key={i}
+              ></Song>
+            ))}
+          </ReleaseInfoSong>
+          <ReleaseInfoSong>
+            {SongDef.slice(15, 31).map((e, i) => (
+              <Song
+                num={e.num}
+                title={e.title}
+                artist={e.artist}
+                key={i}
+              ></Song>
+            ))}
+          </ReleaseInfoSong>
+        </ReleaseInfoBox>
 
         <CenterP>
           配信開始予定日：5/1（金） <br />
