@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../../components/compi/layout"
 import CompiLogoImage from "../../components/compi/logo_image"
 import AAAImage from "../../components/compi/aaa_image"
+import { CoverImage } from "../../components/compi/cover_image"
 import SEO from "../../components/compi/seo"
 import styled, { createGlobalStyle } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
@@ -193,18 +194,6 @@ const CllctvImage = () => {
   const data = useStaticQuery(query)
   return (
     <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="cllctv" />
-  )
-}
-
-const CoverImage = () => {
-  const data = useStaticQuery(query)
-  return (
-    <a href="https://i.gyazo.com/de0c43340a7bd151c08618600b7c6aac.jpg">
-      <Img
-        fluid={data.coverImage.childImageSharp.fluid}
-        alt="Internal Meeting Compilation Jacket"
-      />
-    </a>
   )
 }
 
