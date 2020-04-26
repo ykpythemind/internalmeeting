@@ -271,7 +271,7 @@ const IndexPage = () => {
         <CoverImage></CoverImage>
 
         <center style={{ marginBottom: 20, marginTop: 30 }}>
-          <b>INTERNAL MEETING COMPILATION</b>
+          <b>Internal Meeting Compilation</b>
         </center>
         <ReleaseInfoBox>
           <ReleaseInfoSong>
