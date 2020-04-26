@@ -295,7 +295,7 @@ export const ArtistDefinitions = [
 // prettier-ignore
 export const SongDef = [
 {num: 1, title: "ときめきリサーチ200X", artist: "猫を堕ろす" },
-{num: 2, title: "Coffee and Cigarettes", artist: "KISIMEN" },
+{num: 2, title: "Coffee and Cigarettes (feat. ゆいにしお & masato yamashita)", artist: "KISIMEN" },
 {num: 3, title: "BLUE", artist: "sukida dramas" },
 {num: 4, title: "窓", artist: "スーベニア" },
 {num: 5, title: "岸辺", artist: "3cm.rhythm" },
@@ -314,7 +314,7 @@ export const SongDef = [
 {num: 18, title: "チャイニーズ・パンダ", artist: "POSAKE" },
 {num: 19, title: "kiló", artist: "qulague" },
 {num: 20, title: "エンチナーダ1", artist: "Ogawa & Tokoro" },
-{num: 21, title: "water", artist: "Nishio Daisuke" },
+{num: 21, title: "water (feat. sbe)", artist: "Nishio Daisuke" },
 {num: 22, title: "Stay Home", artist: "めばゑ" },
 {num: 23, title: "自宅", artist: "道草" },
 {num: 24, title: "彼女の景色", artist: "modern-times" },

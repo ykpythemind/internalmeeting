@@ -298,9 +298,16 @@ const IndexPage = () => {
 
         <CenterP>
           配信開始予定日：5/1（金） <br />
-          配信媒体：bandcamp、各種サブスクリプション <br />
-          支援方法：bandcampでのアルバムの購入、サブスクリプションでの再生、各種投げ銭
+          配信媒体：bandcamp、各種サブスクリプション
         </CenterP>
+
+        <div style={{ marginTop: 20 }}>
+          <h4>支援方法</h4>
+          配信：bandcampでのアルバムの購入、各種ストリーミングサービスでの再生
+          <br />
+          その他のご支援方法：直接のお振込など (
+          <Link to="/compi/support">詳細はこちらをご覧ください</Link>)
+        </div>
 
         <SectionTitle>ARTISTS</SectionTitle>
 
