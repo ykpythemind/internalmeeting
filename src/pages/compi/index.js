@@ -303,34 +303,35 @@ const IndexPage = () => {
 
         <CenterP>
           配信開始日：2020/5/1（金） <br />
-          配信媒体：bandcamp、各種サブスクリプション
+          配信媒体：bandcamp、各種ストリーミングサービス
         </CenterP>
 
         <ProviderOuter>
           <ProviderLogoLink
             provider={"bandcamp"}
-            url="google.com"
+            url="https://internalmeeting.bandcamp.com/album/internal-meeting-compilation"
           ></ProviderLogoLink>
           <ProviderLogoLink
             provider={"applemusic"}
-            url="google.com"
+            url="https://music.apple.com/jp/album/1510576195?mt=1&app=music&at=10l7qr"
           ></ProviderLogoLink>
           <ProviderLogoLink
             provider={"spotify"}
-            url="google.com"
+            url="https://open.spotify.com/album/2J0uTFS7Oe4cXA89zeoYeq"
           ></ProviderLogoLink>
-          <div>
-            <a
-              href="https://linkco.re/08VD4Thg"
-              target="_blank"
-              style={{ fontSize: 14 }}
-            >
-              配信サイトを全て見る
-            </a>
-          </div>
         </ProviderOuter>
 
         <div style={{ content: "", display: "block", clear: "both" }}></div>
+
+        <div style={{ textAlign: "right" }}>
+          <a
+            href="https://linkco.re/08VD4Thg"
+            target="_blank"
+            style={{ fontSize: 14 }}
+          >
+            配信サイトを全て見る
+          </a>
+        </div>
 
         <div style={{ marginTop: 20 }}>
           <h4>支援方法</h4>
@@ -420,6 +421,8 @@ const IndexPage = () => {
         <Gokakunin>更新履歴</Gokakunin>
 
         <p style={{ fontSize: 15 }}>
+          * 2020/5/1 アルバムの配信を開始しました。
+          <br />
           * 2020/4/26 第2弾アーティストとアルバム情報を公開しました。
           <br />
           * 2020/4/19 第1弾アーティストを公開しました。

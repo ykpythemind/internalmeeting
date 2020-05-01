@@ -23,13 +23,21 @@ const query = graphql`
 `
 
 export const ProviderOuter = styled.div`
-  margin: 20px 0 0;
-  width: 100%;
+  margin: 20px auto 0;
+  width: 80%;
+  display: flex;
+  justify-content: center;
 `
 
 const LogoOuter = styled.div`
-  float: left;
   margin-right: 15px;
+`
+
+const Logo = styled.img`
+  width: 150px;
+  @media (max-width: 768px) {
+    width: 100px;
+  }
 `
 
 export const ProviderLogoLink = ({ provider, url }) => {
@@ -42,7 +50,7 @@ export const ProviderLogoLink = ({ provider, url }) => {
   return (
     <LogoOuter>
       <a href={url} target="_blank">
-        <img src={image.src} width={100} alt={provider} />
+        <Logo src={image.src} alt={provider} />
       </a>
     </LogoOuter>
   )
