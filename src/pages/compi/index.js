@@ -221,10 +221,6 @@ const IndexPage = () => {
           <CompiLogoImage />
         </CompiLogoOuter>
 
-        <center style={{ fontSize: 13 }}>
-          2020/5/1 アルバムの配信を開始しました。
-        </center>
-
         <SectionTitle>CONCEPT</SectionTitle>
 
         <CenterP>
